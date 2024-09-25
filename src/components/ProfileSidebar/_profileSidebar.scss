@@ -1,0 +1,121 @@
+.profile-sidebar {
+  max-height: 700px;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+
+  .profile-content {
+    background: $white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    border: 1px solid $neutral-light;
+
+    .profile-header {
+      margin-bottom: 30px;
+
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1px solid $accent-color;
+        margin-bottom: 15px;
+      }
+
+      .profile-username {
+        margin-top: 5px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $primary-color;  // Primary color for username
+      }
+    }
+
+    .section-divider {
+      width: 100%;
+      height: 1px;
+      background-color: $neutral-light; // Divider with neutral light
+      margin: 20px 0;
+    }
+
+    .profile-statistics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      justify-items: center;
+      margin-bottom: 20px;
+
+      .stat-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .stat-icon {
+          font-size: 24px;
+          color: $accent-color; // Accent color for icons
+          margin-bottom: 8px;
+        }
+
+        .stat-text h3 {
+          margin: 0;
+          font-size: 16px;
+          font-weight: 600;
+          color: $primary-color;  // Stats heading in primary color
+        }
+
+        .stat-text p {
+          margin: 0;
+          font-size: 12px;
+          color: $neutral-dark;  // Stats text
+        }
+      }
+    }
+
+    .profile-details {
+      font-size: 0.9rem;
+      color: $neutral-dark;  // Neutral dark for text
+      margin-bottom: 20px;
+
+      p {
+        margin: 8px 0;
+      }
+
+      .location {
+        color: darken($secondary-color, 20%); // Darker secondary for location
+      }
+    }
+
+    .profile-links {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+
+      .profile-link {
+        text-decoration: none;  // Remove underline
+        color: $primary-color;  // Set primary color for text
+        font-size: 1rem;  // Adjust font size
+        margin: 10px 0;  // Space between links
+        padding: 10px;  // Padding for touch target
+        border-radius: 6px;  // Rounded corners
+        transition: background-color 0.3s, color 0.3s;  // Smooth transition
+
+        &:hover {
+          background-color: lighten($primary-color, 30%);  // Lighter background on hover
+          color: $neutral-dark;  // Darker text on hover
+        }
+
+        &:active {
+          background-color: darken($primary-color, 10%);  // Darker background on active
+        }
+      }
+    }
+  }
+}

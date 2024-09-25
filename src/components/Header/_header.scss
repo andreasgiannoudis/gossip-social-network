@@ -1,0 +1,125 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-color;
+  padding: 10px 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 1000;
+
+  &.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  .logo-container {
+    width: 30%;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+  }
+
+  .nav-container {
+    width: 70%;
+
+    nav {
+      ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+
+        li {
+          margin-left: 40px;
+
+          a {
+            color: $white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            position: relative;
+            transition: color 0.3s ease;
+
+            &:before {
+              content: "";
+              position: absolute;
+              bottom: -5px;
+              left: 0;
+              width: 0;
+              height: 2px;
+              background-color: $accent-color;
+              transition: width 0.3s ease;
+            }
+
+            &:hover {
+              color: $accent-color;
+              &:before {
+                width: 100%;
+              }
+            }
+
+            &.active {
+              color: $accent-color;
+              &:before {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .logo-container {
+      margin-bottom: 10px;
+    }
+
+    .nav-container {
+      width: 100%;
+
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+
+        li {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}
+
+.profile-icon {
+  font-size: 24px;
+  color: $white;
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  color: $white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $accent-color;
+  }
+}

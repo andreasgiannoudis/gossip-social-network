@@ -1,0 +1,110 @@
+.footer {
+  background-color: $primary-color; 
+  color: $white;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 20px;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+      flex: 1;
+      margin: 20px;
+
+      h2,
+      h3 {
+        margin-bottom: 20px;
+        color: $white;
+      }
+
+      p {
+        line-height: 1.8;
+        color: $neutral-light;
+        font-size: 0.9em;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin: 10px 0;
+        }
+
+        a {
+          color: $white;
+          text-decoration: none;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $accent-color;
+          }
+        }
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 15px;
+        justify-content: flex-start;
+
+        a {
+          color: $white;
+          font-size: 24px;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $accent-color;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      display: block;
+    }
+
+    img {
+      max-width: 70px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    background-color: darken($primary-color, 10%); /* Darker Social Blue */
+    width: 100%;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    p {
+      margin: 0;
+      color: $white;
+    }
+  }
+}

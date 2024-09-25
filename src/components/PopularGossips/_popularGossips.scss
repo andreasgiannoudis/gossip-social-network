@@ -1,0 +1,87 @@
+.sidebar {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: $white; // Set background color for the sidebar
+  padding: 20px; // Add padding for the entire sidebar
+  margin-bottom: 20px; // Add margin to separate from other elements
+  transition: background-color 0.3s ease; // Smooth background transition
+
+  h2 {
+    color: $primary-color;
+    font-size: 2rem; // Increased font size for visibility
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+
+    .fire-icon {
+      color: $accent-color;
+      margin-left: 8px; // Increased spacing for better separation
+    }
+  }
+
+  .gossip-display {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid $neutral-light; // Light border for modern look
+    border-radius: 10px; // Slightly larger border radius
+    background-color: $background-color; // Soft background for the gossip card
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; // Combined transition for hover
+
+    // Hover effect
+    &:hover {
+      transform: translateY(-3px); // Slightly lift effect
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); // Enhanced shadow on hover
+    }
+
+    // Gossip Header
+    .gossip-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      .profile-pic {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      h3 {
+        color: $primary-color;
+        font-size: 1.6rem; // Adjusted font size for clarity
+        margin: 0;
+      }
+
+      small {
+        color: $accent-color; // Change color for better visibility
+        display: block;
+        margin-top: 5px;
+      }
+    }
+
+    p {
+      color: $secondary-color;
+      margin: 10px 0;
+      font-size: 1rem; // Kept consistent
+    }
+
+    span {
+      display: block;
+      font-weight: bold;
+      color: $accent-color;
+    }
+
+    // Likes Section
+    .likes {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      color: $neutral-dark; // Dark text color for contrast
+
+      .likes-icon {
+        margin-right: 5px; // Space between icon and text
+      }
+    }
+  }
+}

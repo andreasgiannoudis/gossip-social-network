@@ -1,0 +1,39 @@
+.add-gossip-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    min-height: 100vh;
+  
+    .header-section {
+      margin-bottom: 30px;
+      text-align: center;
+
+  
+      h1 {
+        font-size: 2.5rem;
+        color: #023047;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+  
+      p {
+        font-size: 1.2rem;
+        color: #219EBC;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    }
+  
+    // Ensures GossipForm is centered and has appropriate spacing
+    .gossip-form-container {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  

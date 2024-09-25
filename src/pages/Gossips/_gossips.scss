@@ -1,0 +1,60 @@
+.gossips-container {
+    padding: 20px;
+    background-color: $background-color;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 110px auto;
+  
+    h1 {
+      color: $primary-color;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  
+    h2 {
+      color: $primary-color;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      color: $neutral-dark;
+      margin: 5px 0;
+    }
+  
+    .gossip-post {
+      background-color: white;
+      border: 1px solid $neutral-light;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s;
+  
+      &:hover {
+        transform: translateY(-2px);
+      }
+  
+      .delete-button {
+        background-color: red; // Change to your desired danger color
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 12px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        transition: background-color 0.2s;
+  
+        &:hover {
+          background-color: darken(red, 10%); // Darken on hover
+        }
+  
+        span {
+          margin-left: 5px; // Space between icon and text
+        }
+      }
+    }
+  }
+  

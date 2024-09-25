@@ -1,0 +1,44 @@
+.post-gossip-form {
+  background: $white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  
+  h3 {
+    font-size: 1.5rem;
+    color: $primary-color;
+    margin-bottom: 10px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input,
+    textarea {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid $secondary-color;
+      border-radius: 5px;
+      font-size: 1rem;
+      &:focus {
+        border-color: $primary-color;
+      }
+    }
+
+    button {
+      background: $accent-color-1;
+      color: $white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: darken($accent-color-1, 10%);
+      }
+    }
+  }
+}

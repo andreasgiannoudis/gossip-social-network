@@ -1,0 +1,127 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  padding-top: 80px;
+  overflow-x: hidden;
+  width: calc(100% - 200px);
+  margin: auto;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+
+    .feed {
+      flex: 2;
+      max-width: 700px;
+
+      .latest-gossips {
+        background: $white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+        h2 {
+          font-size: 2rem;
+          margin-bottom: 20px;
+          color: $primary-color;
+          font-weight: 700;
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+
+          li {
+            margin-bottom: 20px;
+            border-bottom: 2px solid $accent-color;
+            padding-bottom: 10px;
+
+            h3 {
+              margin: 0;
+              color: $primary-color;
+            }
+
+            p {
+              margin: 5px 0;
+              color: darken($neutral-dark, 20%);
+            }
+
+            small {
+              display: block;
+              margin-top: 10px;
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+
+    .hot-posts-sidebar {
+      flex: 1;
+      max-width: 300px;
+      background: $white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      height: auto;
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        color: $primary-color;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+
+        .fire-icon {
+          color: #f4511e;
+          font-size: 1.5rem;
+          animation: fireAnimation 1s infinite;
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 15px;
+          border-bottom: 1px solid $neutral-light;
+          padding-bottom: 10px;
+          transition: box-shadow 0.3s ease;
+
+          &:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          }
+
+          h3 {
+            margin: 0;
+            color: $primary-color;
+          }
+
+          p {
+            margin: 5px 0;
+            color: darken($neutral-dark, 20%);
+          }
+
+          small {
+            display: block;
+            margin-top: 5px;
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes fireAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+}

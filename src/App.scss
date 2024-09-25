@@ -1,0 +1,22 @@
+@import "./components/basicStyling/variables";
+@import "./components/basicStyling/layout";
+@import "./components/Header/header";
+@import "./components/SearchUsers/searchUsers";
+
+
+@import "./pages/Home/home";
+@import "./pages/About/about";
+@import "./pages/LandingPage/landingPage";
+@import "./components/GossipList/gossipList";
+@import "./pages/AddGossipPage/addGossipPage";
+@import "./components/ProfileSidebar/profileSidebar";
+@import "./components/PostGossipForm/postGossipForm";
+@import "./components/PopularGossips/popularGossips";
+@import "./components/UserProfile/userProfile";
+
+
+@import "./pages/Contact/contact";
+@import "./pages/Gossips/gossips";
+
+
+@import "./components/Footer/footer";

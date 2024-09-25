@@ -1,0 +1,149 @@
+$primary-color: #3B5998;    // Soft Social Blue
+$secondary-color: #7F8FA6;  // Warm Neutral Gray
+$accent-color: #D9534F;     // Muted Warm Red (Accent Color)
+$background-color: #F5F5F5; // Light, Neutral Background
+$neutral-light: #CCCCCC;    // Light Gray for UI elements
+$neutral-dark: #444444;     // Dark Gray for Text and Icons
+
+// Other common colors
+$white: #ffffff;
+$black: #000000;
+
+// Additional accent options
+$highlight-color: #FFB347;
+$success-color: #5CB85C;
+$info-color: #5BC0DE;
+
+.landing-page {
+  display: flex;
+  min-height: 100vh;
+  margin-top: 60px;
+
+  .content-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    z-index: 1;
+    position: relative;
+
+    h1 {
+      font-size: 3rem;
+      color: $primary-color;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: $neutral-dark;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .counters {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 40px 0;
+
+      .counter {
+        background: $white;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s;
+
+        h2 {
+          font-size: 2.5rem;
+          color: $primary-color;
+        }
+
+        p {
+          font-size: 1rem;
+          color: $neutral-dark;
+        }
+
+        &:hover {
+          transform: translateY(-10px);
+        }
+      }
+    }
+
+    .form-container {
+      background: $background-color;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      margin: auto;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .form-group {
+          label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: $primary-color;
+          }
+
+          input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid $primary-color;
+            border-radius: 50px;
+            transition: border-color 0.3s;
+
+            &:focus {
+              border-color: $neutral-dark;
+            }
+          }
+        }
+
+        .error-message {
+          color: $accent-color;
+          font-size: 0.9rem;
+        }
+
+        .submit-button {
+          padding: 12px;
+          background-color: $primary-color;
+          color: $white;
+          border-radius: 50px;
+          border: none;
+          font-size: 1.1rem;
+          cursor: pointer;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: $neutral-dark;
+          }
+        }
+      }
+
+      .toggle-form {
+        background: none;
+        border: none;
+        color: $primary-color;
+        cursor: pointer;
+        font-size: 0.9rem;
+        margin-top: 20px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .background-section {
+    flex: 1;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('./src/assets/img/whisper.jpg') no-repeat center center/cover;
+  }
+}
