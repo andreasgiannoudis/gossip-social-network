@@ -3,7 +3,8 @@ import GossipList from "../../components/GossipList/GossipList";
 import ProfileSidebar from "../../components/ProfileSidebar/ProfileSidebar";
 import PostGossipForm from "../../components/PostGossipForm/PostGossipForm";
 import PopularGossips from "../../components/PopularGossips/PopularGossips";
-import { getDatabase, ref, onValue, update, push } from "firebase/database";
+import TopContributors from "../../components/TopContributors/TopContributors";
+import { getDatabase, ref, onValue, push, update } from "firebase/database";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from '../../firebaseConfig';
 
@@ -26,19 +27,21 @@ function Home() {
 
   useEffect(() => {
     const db = getDatabase();
-    const gossipsRef = ref(db, 'gossips/');
+    const gossipsRef = ref(db, "gossips/");
     onValue(gossipsRef, (snapshot) => {
       const data = snapshot.val();
-      const gossipsArray = data ? Object.keys(data).map(key => ({ id: key, ...data[key] })) : [];
+      const gossipsArray = data
+        ? Object.keys(data).map((key) => ({ id: key, ...data[key] }))
+        : [];
       setGossips(gossipsArray);
     });
   }, []);
 
   const addGossip = async (newGossip) => {
     const db = getDatabase();
-    const gossipRef = ref(db, `gossips/`); 
+    const gossipRef = ref(db, `gossips/`);
     const newGossipRef = push(gossipRef);
-    
+
     const gossipData = {
       title: newGossip.title,
       description: newGossip.description,
@@ -47,13 +50,13 @@ function Home() {
       likesCount: 0,
       comments: {},
     };
-  
+
     await set(newGossipRef, gossipData);
-  
-    if (userInfo) { 
+
+    if (userInfo) {
       const userRef = ref(db, `users/${newGossip.author}`);
       await update(userRef, {
-        gossipsCount: (userInfo.gossipsCount || 0) + 1, 
+        gossipsCount: (userInfo.gossipsCount || 0) + 1,
       });
     }
   };
@@ -74,8 +77,16 @@ function Home() {
           </div>
         </div>
 
-        <div className="sidebar hot-posts-sidebar">
-          <PopularGossips gossips={gossips} />
+        <div className="sidebar right-sidebar">
+          {/* Section for popular posts */}
+          <div className="popular-gossips-section hot-posts-sidebar">
+            <PopularGossips gossips={gossips} />
+          </div>
+
+          {/* Section for top contributors */}
+          <div className="top-contributors-section">
+            <TopContributors />
+          </div>
         </div>
       </div>
     </div>

@@ -87,9 +87,7 @@ function ProfileSidebar({ setUserInfo, userInfo }) {
             </div>
           </div>
           <div className="profile-details">
-            <p>
-              <strong>About:</strong> {userInfo.about}
-            </p>
+            
           </div>
           <div className="profile-links">
             <Link to="/profile" className="profile-link">

@@ -1,0 +1,60 @@
+.top-contributors-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f7f9fb;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+    h2 {
+      font-size: 1.8em;
+      color: #34495e;
+      margin-bottom: 15px;
+      font-weight: 600;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+  
+      li {
+        margin-bottom: 12px;
+        font-size: 1.2em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+  
+        strong {
+          color: #2c3e50;
+          font-weight: 500;
+        }
+  
+        .contributor-info {
+          display: flex;
+          align-items: center;
+        }
+  
+        .contributor-avatar {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin-right: 12px;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+  
+        .contributor-post-count {
+          font-size: 1em;
+          color: #7f8c8d;
+          background-color: #ecf0f1;
+          padding: 3px 8px;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+  
